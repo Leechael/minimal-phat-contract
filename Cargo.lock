@@ -1543,6 +1543,7 @@ dependencies = [
  "pink-extension 0.4.6",
  "pink-extension-runtime",
  "scale-info",
+ "this-crate",
 ]
 
 [[package]]

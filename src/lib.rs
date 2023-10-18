@@ -8,6 +8,7 @@ use pink_extension as pink;
 mod minimal_phat_contract {
     use super::pink;
     use pink::PinkEnvironment;
+    use this_crate::{version_tuple, VersionTuple};
 
     #[ink(storage)]
     pub struct Boilerplate {
@@ -17,14 +18,14 @@ mod minimal_phat_contract {
 
     impl Boilerplate {
         #[ink(constructor)]
-        pub fn create() -> Self {
+        pub fn default() -> Self {
             Self {
             }
         }
 
         #[ink(message)]
-        pub fn caller(&self) -> AccountId {
-            Self::env().caller()
+        pub fn version(&self) -> VersionTuple {
+            version_tuple!()
         }
     }
 }
