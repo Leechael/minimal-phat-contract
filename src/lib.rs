@@ -1,7 +1,7 @@
 #![cfg_attr(not(feature = "std"), no_std, no_main)]
 extern crate alloc;
 
-use pink_extension as pink;
+use pink;
 
 #[pink::contract(env=PinkEnvironment)]
 #[pink(inner=ink::contract)]
